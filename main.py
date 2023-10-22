@@ -69,8 +69,8 @@ def right():
 # Function for launching projectiles
 def deploy():
     global projectiles
-    # TODO: Make the "aborted" to be a number above 50
-    if projectiles == "aborted":
+    # Made the "aborted" to be a number above 50
+    if projectiles == 737:
         print("You already aborted the mission!!!")
     elif projectiles > 0:
         # Reduce projectiles
@@ -110,9 +110,9 @@ def deploy_other():
 # Abort the mission!!
 def abort():
     global projectiles, use
-    if projectiles != "aborted":
+    if projectiles != 737 and projectiles > 0:
         # Delete all projectiles
-        projectiles = "aborted"
+        projectiles = 737
         # Clear all effects
         display.clear()
         aim.clear()
@@ -128,8 +128,10 @@ def abort():
         print("Aborted mission!!!")
         alarm = pygame.mixer.Sound('sounds/alarm.wav')
         alarm.play()
-    else:
+    elif projectiles == 737:
         print("You already aborted the mission!!!")
+    elif projectiles <= 0:
+        print("You already ran out of projectiles! There is no need to abort the mission!")
 
 
 # More "screen" code
