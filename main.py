@@ -40,7 +40,7 @@ aim.speed(1000000000000000000000)
 
 # "screen" code
 screen = Screen()
-screen.bgpic(os.path.join("pictures", "background.png"))
+screen.bgpic(os.path.join("pictures", "background.png"))  # Used OS
 screen.update()
 screen.setup(500, 400)
 screen.title("Tracker")
@@ -80,7 +80,7 @@ def deploy():
         aim.dot(25, (0, 0, 0))
         aim.dot(10, "yellow")
         # Tell the user the result
-        ping = pygame.mixer.Sound(os.path.join("sounds", "ping.mp3"))
+        ping = pygame.mixer.Sound(os.path.join("sounds", "ping.mp3"))  # Used OS
         ping.play()
         print("Deployed!!!")
         # Code for the display, again
@@ -101,7 +101,7 @@ def deploy_other():
         aim.dot(30, "yellow")
         aim.dot(10, "red")
         # Tell the user the result
-        boom = pygame.mixer.Sound(os.path.join("sounds", "boom.mp3"))
+        boom = pygame.mixer.Sound(os.path.join("sounds", "boom.mp3"))  # Used OS
         boom.play()
         print("BOOM!!!")
     else:
@@ -118,7 +118,7 @@ def abort():
         display.clear()
         aim.clear()
         # Change the background and size of screen
-        screen.bgpic('pictures/abort.png')
+        screen.bgpic(os.path.join("pictures", "abort.png"))  # Used OS
         screen.update()
         screen.setup(700, 350)
         # ???
@@ -127,7 +127,7 @@ def abort():
         aim.hideturtle()
         # Tell the user
         print("Aborted mission!!!")
-        alarm = pygame.mixer.Sound(os.path.join("sounds", "alarm.wav"))
+        alarm = pygame.mixer.Sound(os.path.join("sounds", "alarm.wav"))  # Used OS
         alarm.play()
     elif projectiles == 737:
         print("You already aborted the mission!!!")
