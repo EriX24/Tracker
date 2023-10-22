@@ -1,6 +1,7 @@
 from turtle import Turtle, Screen
 from secrets import code
 import pygame
+import os
 
 # Init Pygame
 pygame.init()
@@ -39,7 +40,7 @@ aim.speed(1000000000000000000000)
 
 # "screen" code
 screen = Screen()
-screen.bgpic('pictures/background.png')
+screen.bgpic(os.path.join("pictures", "background.png"))
 screen.update()
 screen.setup(500, 400)
 screen.title("Tracker")
@@ -79,7 +80,7 @@ def deploy():
         aim.dot(25, (0, 0, 0))
         aim.dot(10, "yellow")
         # Tell the user the result
-        ping = pygame.mixer.Sound('sounds/ping.mp3')
+        ping = pygame.mixer.Sound(os.path.join("sounds", "ping.mp3"))
         ping.play()
         print("Deployed!!!")
         # Code for the display, again
@@ -100,7 +101,7 @@ def deploy_other():
         aim.dot(30, "yellow")
         aim.dot(10, "red")
         # Tell the user the result
-        boom = pygame.mixer.Sound('sounds/boom.mp3')
+        boom = pygame.mixer.Sound(os.path.join("sounds", "boom.mp3"))
         boom.play()
         print("BOOM!!!")
     else:
@@ -126,7 +127,7 @@ def abort():
         aim.hideturtle()
         # Tell the user
         print("Aborted mission!!!")
-        alarm = pygame.mixer.Sound('sounds/alarm.wav')
+        alarm = pygame.mixer.Sound(os.path.join("sounds", "alarm.wav"))
         alarm.play()
     elif projectiles == 737:
         print("You already aborted the mission!!!")
