@@ -30,6 +30,12 @@ Thing to mention:
  - I used turtle to make it
  - Next I'm making a Bitcoin like thing!!!
 
+Credits:
+ - The background picture is by "ArtStation"
+ - The "abort" image is made with "Pixilart"
+ - The sounds are made by...sorry I forgot!! But they are from Pixabay (The boom and the ping)
+ - The alarm sound is from Mixkit
+
 C u later!!! (See you later!!!)
 
-EriX24
+## EriX24
